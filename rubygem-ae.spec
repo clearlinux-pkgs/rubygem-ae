@@ -4,7 +4,7 @@
 #
 Name     : rubygem-ae
 Version  : 1.8.2
-Release  : 7
+Release  : 8
 URL      : https://rubygems.org/downloads/ae-1.8.2.gem
 Source0  : https://rubygems.org/downloads/ae-1.8.2.gem
 Summary  : No detailed summary available
@@ -34,6 +34,7 @@ gem unpack %{SOURCE0}
 gem spec %{SOURCE0} -l --ruby > rubygem-ae.gemspec
 
 %build
+export LANG=C
 gem build rubygem-ae.gemspec
 
 %install
